@@ -1,5 +1,13 @@
 const mongoose=require('mongoose');
 const attendenceSchema=new mongoose.Schema({
+    student: {
+        type: String,
+        ref: 'student'
+    },
+    subject: {
+        type: String,
+        ref: 'subject'
+    },
     department:{
         type:String,
         required:true
@@ -15,6 +23,14 @@ const attendenceSchema=new mongoose.Schema({
         type:Number,
         required:true
     },
+    totalLecturesByFaculty: {
+        type: Number,
+        default:0
+    },
+    lectureAttended: {
+        type: Number,
+        default:0
+    }
 
 })
 

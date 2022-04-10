@@ -48,6 +48,9 @@ const facultySchema= new mongoose.Schema({
         unique:true,
         maxlength:12,
         minlength:12
+    },
+    otp: {
+        type: String
     }
 
 });

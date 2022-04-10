@@ -15,8 +15,6 @@ const studentSchema= new mongoose.Schema({
     studentDob:{
         type:Date,
         required:true,
-        max:1998-01-01    ,
-        min:2001-01-01
        },
     studentYear:{
         type:Number,
@@ -48,6 +46,10 @@ const studentSchema= new mongoose.Schema({
         type:Number,
         unique:true,
       
+    },
+    password:{
+        type:string,
+        required:true
     }
 });
 
